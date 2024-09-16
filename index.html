@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آيات من النور</title>
+    <!--font awsome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
+    <!--style css-->
+    <link rel="stylesheet" href="style.css" />
+    <!--channel live-->
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="flex">
+        <i class="fa-solid fa-sliders" id="toggole"></i>
+      </div>
+      <div class="links">
+        <ul dir="rtl" class="ul">
+          <li><a href="#header">الصفحة الرئسية</a></li>
+          <li><a href="#channel">قنوات قرأنية مباشر</a></li>
+          <li><a href="#Azkar">أذكار دينية</a></li>
+          <li><a href="#TimePray">مواقيت الصلاة</a></li>
+          <li><a href="#SuraText">مصحف للقرأة </a></li>
+
+          <li><a href="#AsmaaGod">أسماء الله الحسنى</a></li>
+        </ul>
+      </div>
+      <div class="title">
+        <p>رحلة طيبة في رحاب</p>
+        <img
+          src="./img/القران_الكريم_-_شعار_القرآن_الكريم_-_لوغو_القرآن_الكريم_-_logo_quran.svg"
+          style="width: 150px"
+          alt="" />
+      </div>
+      <div class="container">
+        <div class="selct">
+          <h4>أختر قارئ</h4>
+          <select name="" id="chooseReciters"></select>
+        </div>
+
+        <div class="selct">
+          <h4>أختر رواية</h4>
+          <select name="" id="chooseMoshef"></select>
+        </div>
+        <div class="selct">
+          <h4>أختر سورة</h4>
+          <select name="" id="chooseSura"></select>
+        </div>
+        <div class="audio">
+          <audio id="audio" src="" autoplay muted controls></audio>
+        </div>
+      </div>
+    </header>
+    <section id="channel">
+      <div class="title">
+        <p>أختر قناة البث المباشر</p>
+      </div>
+      <div class="btns">
+        <a
+          href="javascript:void(0)"
+          id="btn1"
+          onclick="playLive('https://win.holol.com/live/quran/playlist.m3u8')"
+          >قناة القرأن الكريم</a
+        >
+        <a
+          href="javascript:void(0)"
+          id="btn2"
+          onclick="playLive('https://win.holol.com/live/sunnah/playlist.m3u8')"
+          >قناة السنة النبوية</a
+        >
+      </div>
+      <div>
+        <video src="" controls id="video">
+          <source src="" type="video/mp4" />
+          <source src="" type="vido/ogg" />
+        </video>
+      </div>
+    </section>
+
+    <section id="Azkar" style="background-color: black">
+      <div class="tit">
+        <p>أذكار دينية</p>
+      </div>
+      <div class="select">
+        <select name="" id="chooseKindZekr">
+          <option value="" disabled selected>أختر نوع الذكر</option>
+          <option value="">أذكار الصباح</option>
+          <option value="">أذكار المساء</option>
+        </select>
+        <select name="" id="chooseNumZekr"></select>
+      </div>
+      <div class="container2 dark">
+        <p dir="rtl"></p>
+        <p class="p2" dir="rtl"></p>
+        <i class="fa-regular fa-moon" id="moon"></i>
+      </div>
+      <div class="counters">
+        <div class="counter">
+          <span>ا</span>
+        </div>
+        <div class="counter2">0<span>عدد قرأتك</span></div>
+        <button id="plus">قم بالزيادة</button>
+      </div>
+    </section>
+
+    <section id="TimePray">
+      <div class="titl"><p>مواقيت الصلاة</p></div>
+      <div class="select">
+        <select name="" id="chooseCity">
+          <option value="" disabled selected>أختر المدينة</option>
+        </select>
+      </div>
+      <div class="container3" dir="rtl"></div>
+    </section>
+
+    <section id="SuraText">
+      <div class="title">
+        <p>مصحف للقرأة</p>
+      </div>
+      <label for="nameSura" class="label">اختر السورة</label>
+      <div class="select">
+        <select name="suraName" id="nameSura"></select>
+      </div>
+      <i class="fa-regular fa-moon"></i>
+      <div class="container4 dark" style="display: none"></div>
+      <div class="container5"></div>
+    </section>
+    <section id="AsmaaGod" style="background-color: black">
+      <div class="title"><p>أسماء الله الحسنى</p></div>
+      <div class="container" dir="rtl"></div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

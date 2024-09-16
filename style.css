@@ -1,0 +1,481 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+  font-family: "Amiri", serif;
+}
+select {
+  background-color: rgb(252, 252, 252);
+  font-size: 20px;
+  padding: 5px;
+  width: 200px;
+}
+@media (max-width: 300px) {
+  select {
+    width: 85%;
+  }
+}
+option {
+  background-color: #000000;
+  color: white;
+  display: block;
+}
+option:hover {
+  background-color: #ce1111;
+}
+
+/* التحكم في حجم شريط التمرير */
+::-webkit-scrollbar {
+  width: 15px; /* عرض شريط التمرير */
+  height: 10px; /* طول شريط التمرير */
+}
+
+/* لون شريط التمرير الخلفي */
+::-webkit-scrollbar-track {
+  background: #f3eded;
+}
+
+/* لون جزء التمرير */
+::-webkit-scrollbar-thumb {
+  background-color: #f0120b; /* لون جزء التمرير */
+  /* زاوية دائرية */
+  /* حدود حول جزء التمرير */
+}
+
+/* تغيير لون جزء التمرير عند التمرير */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ce1111;
+}
+.show {
+  display: block;
+}
+
+.white {
+  background-color: white;
+  color: black;
+}
+.dark {
+  background-color: black;
+  color: white;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+#header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./img/bowl-multicolored-lukum-red-holy-rosary-beads-kuran-with-candles-wooden-surface.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#header i {
+  position: absolute;
+  top: 27px;
+  font-size: 35px;
+  cursor: pointer;
+  left: 13px;
+  color: white;
+  display: none;
+}
+@media (max-width: 468px) {
+  #header {
+    background-position: left;
+  }
+}
+#header .links {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #000000c0;
+  border-radius: 10px;
+}
+#header .links .ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#header .links ul {
+  list-style: none;
+  padding: 15px;
+  font-size: 25px;
+  margin: 10px;
+}
+
+@media (max-width: 468px) {
+  #header .links ul li {
+    text-align: center;
+  }
+  #header .links .ul {
+    display: none;
+  }
+  #header i {
+    display: block;
+    z-index: 100;
+  }
+}
+#header .links ul li {
+  margin: 10px;
+  padding: 10px;
+}
+#header .links ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 1s;
+}
+#header .links ul li a:hover {
+  color: #f0120b;
+}
+#header .container {
+  background-color: black;
+}
+.container {
+  color: white;
+  padding: 20px;
+  margin: 70px auto;
+  text-align: center;
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  #header .container {
+    justify-content: center;
+  }
+}
+
+.container .selct select {
+  margin: 10px;
+}
+.container .selct h4 {
+  font-size: 24px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 40px;
+}
+
+.title p {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  text-align: center;
+  margin: 25px 0;
+}
+
+@media (max-width: 468px) {
+  .title p:last-child {
+    font-size: 40px;
+  }
+  #header .container {
+    width: 95%;
+  }
+}
+.audio {
+  width: 100%;
+  padding: 10px;
+}
+.audio audio {
+  width: 100%;
+}
+/*channel*/
+section {
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+#channel {
+  background-color: #ddd;
+}
+#channel .title p {
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+#channel .btns,
+.video {
+  text-align: center;
+  margin-top: 20px;
+}
+#channel .btns a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  color: rgba(255, 0, 0, 0.651);
+  background-color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+#channel .btns a:hover {
+  background-color: #ce1111;
+  color: white;
+}
+video {
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  height: 80vh;
+}
+@media (max-width: 768px) {
+  video {
+    height: 65vh;
+  }
+}
+@media (max-width: 468px) {
+  video {
+    height: 50vh;
+  }
+}
+
+#Azkar {
+  background: url("./img/lamp-book-table.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Azkar .tit p {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+}
+@media (max-width: 468px) {
+  #Azkar .tit p {
+    font-size: 40px;
+  }
+}
+#Azkar .select {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#Azkar .select select {
+  font-size: 25px;
+  margin: 10px;
+}
+
+#Azkar .container2 {
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+  margin: 15px auto;
+  text-align: center;
+  justify-content: center;
+  width: 95%;
+  display: none;
+}
+#Azkar .container2 p {
+  font-size: 35px;
+}
+#Azkar .container2 i {
+  cursor: pointer;
+}
+#Azkar .container2 .p2 {
+  background: rgb(29, 29, 29);
+  border-radius: 10px;
+  margin-block: 15px;
+  color: white;
+}
+#Azkar .counter {
+  text-align: center;
+  font-size: 22px;
+  background-color: rgb(12, 255, 243);
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+  width: fit-content;
+  display: none;
+}
+#Azkar .counters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Azkar .counters > * {
+  margin: 10px;
+}
+
+span {
+  margin: 10px;
+}
+#Azkar .counters .counter2 {
+  background-color: #ce1111;
+  color: white;
+  font-size: 22px;
+  width: fit-content;
+  display: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+#Azkar #plus {
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  background-color: blue;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  display: none;
+}
+@media (max-width: 468px) {
+  #Azkar .counter,
+  #Azkar #plus,
+  #Azkar .counters .counter2 {
+    font-size: 14px;
+  }
+}
+/*TimePray*/
+#TimePray {
+  background: url("./img/5053115.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#TimePray .titl,
+#TimePray .select {
+  display: flex;
+  justify-content: end;
+  margin-right: 40px;
+}
+#TimePray .titl p {
+  color: rgb(3, 226, 255);
+  font-size: 60px;
+}
+#TimePray .select {
+  margin-right: 60px;
+}
+
+#TimePray .container3 {
+  margin: 40px;
+  background: url("./img/6729989.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30vw;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  font-size: 22px;
+  font-weight: 800;
+  color: black;
+}
+@media (max-width: 768px) {
+  #TimePray .container3 {
+    width: 50vw;
+  }
+  #TimePray .titl,
+  #TimePray .select {
+    justify-content: center;
+    margin-right: 0;
+  }
+  #TimePray .titl p {
+    text-align: center;
+    margin-right: 0;
+    font-size: 35px;
+  }
+}
+@media (max-width: 468px) {
+  #TimePray .container3 {
+    width: 90vw;
+    margin: 10px auto;
+  }
+}
+/*SuraText*/
+
+#SuraText {
+  background: url("./img/09-150ppp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#SuraText .select {
+  text-align: center;
+}
+#SuraText .title {
+  margin-block: 20px;
+}
+#SuraText .title p {
+  font-size: 40px;
+}
+.label {
+  display: block;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.container4 {
+  border-radius: 5px;
+  padding: 10px;
+  width: 98%;
+  margin: 20px auto;
+  text-align: center;
+  overflow-y: auto;
+  font-size: 25px;
+  height: 250px;
+}
+.container4 h1 {
+  margin-block: 20px;
+}
+#SuraText .fa-moon {
+  display: none;
+  margin-block: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.fa-moon {
+  font-size: 30px;
+}
+
+@media (max-width: 300px) {
+  p,
+  h1,
+  h4,
+  span,
+  #Azkar .container2 p {
+    font-size: 15px;
+  }
+  .counters {
+    flex-direction: column;
+  }
+  .title img {
+    display: none;
+  }
+}
+/*AsmaaGod*/
+
+#AsmaaGod .container {
+  box-shadow: 0 0 10px #eee;
+}
+#AsmaaGod .container span {
+  font-size: 25px;
+}
+
+@media (max-width: 468px) {
+  #AsmaaGod .container span {
+    font-size: 15px;
+  }
+}
