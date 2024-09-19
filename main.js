@@ -324,14 +324,13 @@ nameSura.addEventListener("change", async function () {
   moonIcon2.style.display = "block";
   let count = 1;
   container4.style.display = "block";
-  container4.innerHTML = `<h1>بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِیمِ</h1>`;
+  
 
   data.data.ayahs.forEach((e, index) => {
-    if (index > 0) {
+   
       container4.innerHTML += `${e.text}(${count})`;
-
       count++;
-    }
+    
   });
 });
 
